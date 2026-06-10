@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oktoberfest Team Building 2026</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 2rem;
+      padding: 3rem;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 191, 0, 0.15);
+      color: #ffbf00;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 span {
+      color: #ffbf00;
+    }
+
+    p.subtitle {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    .details {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .detail-item svg {
+      flex-shrink: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .form-row > * {
+      flex: 1;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.85rem 1.2rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      color: #fff;
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    input:focus, select:focus {
+      border-color: #ffbf00;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='rgba(255,255,255,0.5)'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
+
+    select option {
+      background: #1a1a2e;
+      color: #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.9rem;
+      background: #ffbf00;
+      color: #1a1a2e;
+      font-weight: 700;
+      font-size: 1rem;
+      font-family: inherit;
+      border: none;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+      margin-top: 0.5rem;
+    }
+
+    button:hover {
+      background: #ffd033;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(255, 191, 0, 0.3);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .success {
+      display: none;
+      text-align: center;
+      padding: 1.5rem 0 0.5rem;
+    }
+
+    .success.show {
+      display: block;
+    }
+
+    .success-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .success h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .success p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 2rem 1.5rem;
+      }
+      .form-row {
+        flex-direction: column;
+      }
+      .details {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Team Building 2026</div>
+    <h1>Oktoberfest<br /><span>Munich</span></h1>
+    <p class="subtitle">
+      Join us for an unforgettable team building experience at the world's
+      most famous festival. Beer, pretzels, and great company await.
+    </p>
+
+    <div class="details">
+      <div class="detail-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffbf00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        September 27, 2026
+      </div>
+      <div class="detail-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffbf00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        Munich, Germany
+      </div>
+    </div>
+
+    <form id="signup-form">
+      <div class="form-row">
+        <input type="text" id="first-name" placeholder="First Name" required />
+        <input type="text" id="last-name" placeholder="Last Name" required />
+      </div>
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="text" id="company" placeholder="Company / Team" required />
+      <select id="guests" required>
+        <option value="" disabled selected>Number of guests</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5+</option>
+      </select>
+      <button type="submit">Sign Up Now</button>
+    </form>
+
+    <div class="success" id="success">
+      <div class="success-icon">🎉</div>
+      <h2>You're signed up!</h2>
+      <p>We'll send the details to your email.</p>
+    </div>
+
+    <div class="footer">
+      Limited spots available — reserve yours today.
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('signup-form');
+    const success = document.getElementById('success');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.reset();
+      form.style.display = 'none';
+      success.classList.add('show');
+    });
+  </script>
+</body>
+</html>
