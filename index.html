@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Outings &mdash; Quarterly Events</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <header class="hero" id="featured-event">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="badge">Featured Event</span>
+          <h1 id="event-title">Oktoberfest<br>in Munich</h1>
+          <div class="hero-details">
+            <div class="detail" id="event-date-detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span id="event-date">September 27th, 2026</span>
+            </div>
+            <div class="detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span id="event-location">Munich, Germany</span>
+            </div>
+          </div>
+          <p class="hero-subtitle" id="event-description">
+            Join us for an unforgettable day of Bavarian tradition, great company,
+            and celebration at the world's most famous folk festival. First
+            <strong>20 signups</strong> get a spot!
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="card">
+            <h2>Sign Up Now</h2>
+            <p class="card-sub">Reserve your spot for the next team outing.</p>
+            <form id="signup-form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="you@company.com">
+              </div>
+              <div class="form-group">
+                <label for="event-select">Event</label>
+                <select id="event-select" name="event"></select>
+              </div>
+              <button type="submit" class="btn-primary">Register</button>
+            </form>
+            <p class="form-footnote">First 20 signups &bull; Limited spots available</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="events-section">
+      <div class="container">
+        <h2>All Events</h2>
+        <div class="events-list" id="events-list"></div>
+      </div>
+    </section>
+
+    <section class="countdown-section">
+      <div class="container">
+        <h2>Next Event Starts In</h2>
+        <div class="countdown" id="countdown">
+          <div class="countdown-item">
+            <span class="countdown-number" id="days">00</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="hours">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="minutes">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="seconds">00</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Team Outings &mdash; Quarterly events for the whole team.</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      <span id="toast-message">Registration successful!</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
